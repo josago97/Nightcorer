@@ -1,0 +1,45 @@
+label {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  transition: all 0.15s;
+}
+
+label:hover {
+  transform: scale(1.025);
+}
+
+label * {
+  pointer-events: none;
+}
+
+.fail-drag {
+  --content-backgorund: rgb(243, 155, 155);
+}
+
+.success-drag {
+  --content-backgorund: rgb(180, 243, 155);
+}
+
+.content {
+  padding: 1em;
+  cursor: inherit;
+  background-color: var(--content-backgorund);
+  border-radius: 5px;
+  border: 2px dashed #92b397;
+}
+
+
+.title {
+  margin-bottom: 0.25em;
+  font-weight: bold;
+}
+
+
+.formats {
+ color: gray;
+}

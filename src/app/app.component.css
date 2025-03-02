@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+}
+
+header {
+  font-size: 1.5em;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  margin-inline: auto;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.timebar {
+  display: flex;
+  gap: 0.25em;
+  align-items: flex-end;
+  width: 100%;
+  font-family: 'Comic Mono';
+  font-weight: bold;
+  font-size: 90%;
+
+  input {
+    flex: 1;
+  }
+}
+
+footer {
+  padding: 10px;
+  border-top: 1px solid darkgray;
+  text-align: end;
+}

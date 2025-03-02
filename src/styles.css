@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  font-size: 105%;
+  font-family: 'Info Story', 'Courier New', Courier, monospace;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Comic Mono';
+  src: url('/fonts/comic_mono/ComicMono.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Info Story';
+  src: url('/fonts/info_story/InfoStory.otf') format('truetype');
+}
