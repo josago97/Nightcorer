@@ -8,6 +8,14 @@ html, body {
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
+.emoji {
+  font-family: "Segoe UI Emoji";
+}
+
 @font-face {
   font-family: 'Comic Mono';
   src: url('/fonts/comic_mono/ComicMono.ttf') format('truetype');

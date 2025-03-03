@@ -7,54 +7,34 @@
     <app-file-input (fileChanged)="importAudioFile($event)"></app-file-input>
   </section>
 
-  @if (audioReady) {
+  @if (player.audioReady) {
+  <section class="player">
+    <app-audio-player></app-audio-player>
+  </section>
+
   <section>
-    <div>
-      <div class="timebar">
-        <span>{{currentTime | time}}</span>
-        <input type="range" name="track" [min]="0" [max]="100" step="0.01" [value]="percentagePlayed"
-          (input)="seekTrack($event)">
-        <span>{{duration | time}}</span>
-      </div>
-      <div>
-        <button (click)="playPause()">
-          @if (isPlaying) {
-          <i class="fa-solid fa-pause"></i>
-          } @else {
-          <i class="fa-solid fa-play"></i>
-          }
-        </button>
-        <button [disabled]="!isPlaying" (click)="stop()">
-          <i class="fa-solid fa-stop"></i>
-        </button>
-      </div>
-    </div>
-
-
-
-    <input type="range" name="volume" min="0" max="1" step="0.01" [(ngModel)]="volume"
-      (ngModelChange)="onSettingsChanged()">
-    <span>Volume: {{volume}}</span>
+    <input type="range" name="volume" min="0" max="1" step="0.01" [(ngModel)]="player.volume">
+    <span>Volume: {{player.volume}}</span>
     <br>
 
-    <input type="range" name="semitones" min="-12" max="12" step="1" [(ngModel)]="semitones"
-      (ngModelChange)="onSettingsChanged()">
-    <span>Semitones: {{semitones}}</span>
+    <input type="range" name="semitones" min="-12" max="12" step="1" [(ngModel)]="player.semitones">
+    <span>Semitones: {{player.semitones}}</span>
     <br>
 
-    <input type="range" name="tempo" min="0.25" max="3" step="0.01" [(ngModel)]="speed"
-      (ngModelChange)="onSettingsChanged()">
-    <span>Speed: {{speed}}</span>
+    <input type="range" name="tempo" min="0.25" max="3" step="0.01" [(ngModel)]="player.speed">
+    <span>Speed: {{player.speed}}</span>
     <br>
   </section>
 
   <section>
-    <button (click)="export()">Export wav</button>
+    <button (click)="exportToWav()">Export wav</button>
   </section>
   }
 
 </main>
 
 <footer>
-  Made with ❤
+  <span class="emoji">&#x2764;</span>
+  Made with love :3
+  <span class="emoji">&#x2764;</span>
 </footer>

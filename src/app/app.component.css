@@ -22,19 +22,8 @@ main {
   width: 100%;
 }
 
-
-.timebar {
-  display: flex;
-  gap: 0.25em;
-  align-items: flex-end;
-  width: 100%;
-  font-family: 'Comic Mono';
-  font-weight: bold;
-  font-size: 90%;
-
-  input {
-    flex: 1;
-  }
+.player {
+  margin-block: 20px;
 }
 
 footer {
